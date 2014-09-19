@@ -1,0 +1,89 @@
+﻿@model Dominio1.Pedidos
+
+@{
+    ViewBag.Title = "Cadastrar";
+}
+
+<img src="~/Content/PaginaEmConstru%c3%a7%c3%a3o.png" width="500" style="position: relative; left: 308px;top:10px;z-index:-2;" />
+<h2 style="font-size:12px; color:Red;">
+
+    Preencha o formulario que nos responderemos o seu pedido o mais rapido possivel <br />
+    Obrigado e Desculpe pelo transtorno!
+</h2>
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Pedidos</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Nome, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Nome)
+                @Html.ValidationMessageFor(model => model.Nome)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Endereco, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Endereco)
+                @Html.ValidationMessageFor(model => model.Endereco)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Email, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Email)
+                @Html.ValidationMessageFor(model => model.Email)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Marca, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Marca)
+                @Html.ValidationMessageFor(model => model.Marca)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Modelo, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Modelo)
+                @Html.ValidationMessageFor(model => model.Modelo)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Ano, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Ano)
+                @Html.ValidationMessageFor(model => model.Ano)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Peca, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Peca)
+                @Html.ValidationMessageFor(model => model.Peca)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+

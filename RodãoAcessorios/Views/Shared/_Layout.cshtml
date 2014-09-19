@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+   
+</head>
+
+
+
+    <nav>
+        <ul class="menu">
+            <li>
+                <a href="#">Farois e lanternas         </a>
+                <ul>
+                    <li><a href="@Url.Action("Cadastrar", "Produtos")">Farol Principal
+</a></li>
+
+                    <li>
+                    <li>
+                        <a href="@Url.Action("Cadastrar", "Produtos")">
+                            Farol de milha
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="@Url.Action("Cadastrar", "Produtos")">
+                            Farol de xenon
+                        </a>
+                    </li>
+
+                    <li><a href="#">Lampadas de xenon e leds</a></li>
+
+                </ul>
+
+            </li>
+
+            <li>
+                <a href="#">Parachoques e grades </a>
+                <ul>
+                    <li><a href="#">Parachoque Dianteiro</a></li>
+                    <li><a href="#">Parachoque Traseiro</a></li>
+                    <li>
+                        <a href="@Url.Action("Cadastrar", "Produtos")">
+                            Farol de xenon
+                        </a>
+                    </li>
+                    <li><a href="@Url.Action("Cadastrar", "Produtos")"></a>
+</li>
+
+                </ul>
+            </li>
+
+
+            <li>
+                <a href="#">Capotas e Estribos</a>
+                <div>
+                    <ul>
+                        <li><a href="#">Capotas Maritimas</a></li>
+                        <li><a href="#">Estribos</a></li>
+
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#">Volantes e retrovisores </a>
+                <ul>
+                    <li><a href="#">Volante</a></li>
+                    <li><a href="#">Cubo para Volante</a></li>
+                    <li><a href="#">Retrovisores</a></li>
+                    <li><a href="#">Buzinas</a></li>
+
+
+
+                </ul>
+            </li>
+            <li>
+                <a href="#">Parabrisas </a>
+                <ul>
+                    <li><a href="#">Volante</a></li>
+                    <li><a href="#">Cubo para Volante</a></li>
+                    <li><a href="#">Retrovisores</a></li>
+                    <li><a href="#">Buzinas</a></li>
+
+
+
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">Lampadas</a>
+                <ul>
+                    <li><a href="#">Volante</a></li>
+                    <li><a href="#">Cubo para Volante</a></li>
+                    <li><a href="#">Retrovisores</a></li>
+                    <li><a href="#">Buzinas</a></li>
+
+
+
+                </ul>
+            <li>
+                <a href="#">Maquinas de vidro</a>
+                <ul>
+                    <li><a href="#">Volante</a></li>
+                    <li><a href="#">Cubo para Volante</a></li>
+                    <li><a href="#">Retrovisores</a></li>
+                    <li><a href="#">Buzinas</a></li>
+
+
+
+                </ul>
+            </li>
+            <li>
+                <a href="#">Maçanetas e Manivelas </a>
+                <ul>
+                    <li><a href="#">Volante</a></li>
+                    <li><a href="#">Cubo para Volante</a></li>
+                    <li><a href="#">Retrovisores</a></li>
+                    <li><a href="#">Buzinas</a></li>
+
+
+
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+
+       
+
+            <div class="navbar-header">
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+
+                </button>
+                <div class="Logo">
+                    <img src="~/Content/untitled.png" />
+                </div>
+
+            </div>
+            <div class="navbar-collapse collapse">
+
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Empresa", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contato", "Contato", "Home")</li>
+
+                </ul>
+            </div>
+            <div style="position: relative; right: -1082px; top: -103px; color: #00ffff;">
+                </br>
+                Ariquemes/RO
+                <br />
+                Av. Canaã, Nº 1652, Areas Especiais
+                </br>
+                <img src="~/Content/Tel.jpg" width="20" />  (69) 3535-2261 / 3535-5432
+                <br />
+            </div>
+        
+
+        </div>
+
+    </div>
+   
+    <div class="container body-content">
+       
+        @RenderBody()
+
+
+        <hr />
+        <footer>
+            <p class="Henrique">&copy; @DateTime.Now.Year -Desenvolvido por Henrique Balbino Silva<br /> Tel: (69)9294-7950</p>
+
+
+            <address >
+                Rodão Comércio e Representações LTDA
+                </br>
+                Av. Canaã, Nº 1652, Areas Especiais
+                </br>
+                69 3535-2261 / 3535-5432
+            </address>
+
+            <address>
+                <strong>E-mail:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
+                <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+            </address>
+
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
